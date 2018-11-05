@@ -8,6 +8,9 @@
 }
 
 <h2>ViewCart</h2>
+<div>
+    <input type="submit" class="btn btn-success" value="Place Order" />
+</div>
 
 <div class="container order">
     <div class="row">
@@ -20,21 +23,21 @@
 
         </div>
         <div class="col-md-2 order">
-            
+
         </div>
-        
-            <div class="col-md-2 order">
-                Price
 
-            </div>
-            <div class="col-md-2 order">
-                Quantity
-            </div>
-            <div class="col-md-2 order">
+        <div class="col-md-2 order">
+            Price
 
-            </div>
+        </div>
+        <div class="col-md-2 order">
+            Quantity
+        </div>
+        <div class="col-md-2 order">
+
         </div>
     </div>
+</div>
 
 <form asp-action="ProcessOrder" asp-controller="Cart" method="post">
     @for (var i = 0; i < list.Count; i++)
@@ -66,7 +69,5 @@
         </div>
 
     }
-    <div>
-        <input type="submit" class="btn-dark" value="Place Order" />
-    </div>
+
 </form>
