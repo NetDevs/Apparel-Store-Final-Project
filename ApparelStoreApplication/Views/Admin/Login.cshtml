@@ -76,14 +76,14 @@
     </body>*@
 <link href="~/css/LoginStyle.css" rel="stylesheet" />
 
-<body>
-    <center> <h2 style="color:Purple; font-size:500%; font-family:'Times New Roman'"><b>CLOTH-NATION</b></h2></center>
+@*<body>
+    <center> <h2 style="color:#A37FB0; font-size:500%; font-family:'Comic Sans MS'"><b>CLOTH-NATION</b></h2></center>
 
     <div id="example1" height="100%">
         <div class="transbox">
 
             <form asp-action="Login" asp-controller="Admin" method="post" align="center">
-                <b>
+                <br>
                     <h2 style="color:darkblue"> <b>Login:</b></h2>
                     <input type="email" placeholder="Enter Email" name="Email" required>
                     <br>
@@ -97,4 +97,26 @@
             </form>
         </div>
     </div>
+</body>*@
+
+<body>
+
+    <center> <h2 style="color:#A37FB0; font-size:500%; font-family:'Comic Sans MS'"><b>CLOTH-NATION</b></h2></center>
+
+    <div id="example1" height="100%">
+        <form asp-action="Login" asp-controller="Admin" method="post" align="center">
+            <br>
+            <h2 style="color:darkblue"> <b>Login:</b></h2>
+            <input type="email" placeholder="Enter Email" name="Email" required>
+            <br>
+            <h2 style="color:darkslategray"><b>Password:</b></h2>
+            <input type="password" placeholder="Enter Password" name="Password" required>
+            <br><br />
+            <button class="btn">Submit</button>
+            <div asp-validation-summary="All"></div>
+            <button class="btn"><a href="http://localhost:50816/admin/signup">Create Account</a></button>
+
+        </form>
+        </div>
+
 </body>

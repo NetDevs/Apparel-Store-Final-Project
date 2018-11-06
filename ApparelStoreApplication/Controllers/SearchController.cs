@@ -34,10 +34,11 @@ namespace ApparelStoreApplication.Controllers
         {
             byte[] ary;
             service.context = HttpContext;
-            string json = JsonConvert.SerializeObject(S);
+           
             bool isavailable = service.context.Session.TryGetValue("CatSubCat", out ary);
             if (isavailable == false)
             {
+                string json = JsonConvert.SerializeObject(S);
                 service.context.Session.SetString("CatSubCat", json);
             }
             var result = service.GetProducts(S);

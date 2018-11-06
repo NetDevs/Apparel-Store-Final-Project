@@ -8,7 +8,8 @@
 }
 
 <h2>ViewCart</h2>
-<div>
+<div class="row">
+    
     <input type="submit" class="btn-dark" value="Place Order" />
 </div>
 <div class="container order">
@@ -45,7 +46,7 @@
             <div class="row">
                 <div class="col-md-2 order-div">@list[i].ProductId</div> <input type="hidden" name="[@i].ProductId" value="@list[i].ProductId" />
                 <div class="col-md-2 order-div">@list[i].Title</div> <input type="hidden" name="[@i].Title" value="@list[i].Title" />
-                <div class="col-md-2 order-div"><img src="@list[i].ProductImage" /> </div> <input type="hidden" name="[@i].ProductImage" value="@list[i].ProductImage" />
+                <div class="col-md-2 order-div"><img class="card-img-top" src="@list[i].ProductImage" /> </div> <input type="hidden" name="[@i].ProductImage" value="@list[i].ProductImage" />
                 <div class="col-md-2 order-div">@list[i].Price</div> <input type="hidden" name="[@i].Price" value="@list[i].Price" />
                 <div class="col-md-2 order">
                     <select name="[@i].Quantity">
